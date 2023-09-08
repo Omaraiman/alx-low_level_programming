@@ -13,8 +13,9 @@ int main(void)
 	while (x <= 'z')
 	{
 		putchar(x);
-		(int) x = x + 1;
-	}
-	putchar('\n');
+		putchar('\n');
+		x = (int) x  + 1;
+		x = (char) x;
+	};
 	return (0);
 }
