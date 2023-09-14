@@ -3,6 +3,7 @@
 
 /**
 *main - return valu
+*@c: char to check
 *
 *Desctiption: A C program that return 1 or 0 in fuction called isupper
 *
