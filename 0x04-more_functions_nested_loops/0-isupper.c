@@ -9,16 +9,15 @@
 *Return: 0 , 1
 */
 
-int isupper(void)
+int _isupper(int c)
 {
-int count;
-int d;
-for (count = 'A'; count <= 'Z'; count++)
-{
-if (d != count)
+if (c >= 'A' && c <= 'Z')
 {
 return (1);
 }
+else
+{
 return (0);
 }
+_putchar("%d\n", c)
 }
