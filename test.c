@@ -1,20 +1,13 @@
 #include <stdio.h>
 
-int some_function(void)
+int main(void)
 {
-    int i;
-
-    for (i = 0; i < 10; i++)
-    {
-        printf("%d", i);
-    }
-    return(i);
-}
-
-int main(void){
-
-
-some_function();
-
-
+	int x = 10;
+	int *ptr;
+	ptr = &x;
+	printf("value of x     :  %d\n", x);
+	printf("addres of x     :  %u\n", &x);
+	printf("addres of x     :  %u\n", ptr);
+	printf("value of x     :  %d\n", *ptr);
+	printf("value of x     :  %d\n", *ptr);
 }
