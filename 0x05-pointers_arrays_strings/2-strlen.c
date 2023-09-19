@@ -12,7 +12,7 @@
 
 int _strlen(char *s)
 {
-	int s[] = "My first strlen!";
+	char s[] = "My first strlen!";
 
 	int i;
 
