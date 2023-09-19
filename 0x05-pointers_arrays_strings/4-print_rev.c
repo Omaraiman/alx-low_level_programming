@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_rev - print reverse array
+ * print_rev - print rev array
  * @s: string
  * return: 0
  */
@@ -17,5 +17,5 @@ void print_rev(char *s)
 	{
 		_putchar(s[j]);
 	}
-	_putchar("\n");
+	_putchar('\n');
 }
