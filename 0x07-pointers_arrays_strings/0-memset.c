@@ -3,10 +3,12 @@
 
 /**
  * _memset - the address of memory to print
- * @s: input value
- * @b: input value
- * @n: input value
- * Return: void
+ *
+ * @s: starting address of memory to be filled
+ * @b: the desired value
+ * @n: number of bytes to be changed
+ *
+ * Return: changed array with new value for n bytes
  */
 
 char *_memset(char *s, char b, unsigned int n)
@@ -15,5 +17,5 @@ char *_memset(char *s, char b, unsigned int n)
 	{
 		s[i] = b;
 	}
-	return (*s);
+	return (s);
 }
