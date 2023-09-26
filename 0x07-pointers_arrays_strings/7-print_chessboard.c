@@ -3,8 +3,10 @@
 
 /**
  * print_chessboard -   prints the chessboard.
+ *
  * Description: a function that prints the chessboard.
  * @a: input char
+ *
  * Return: null
  */
 
