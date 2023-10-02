@@ -6,7 +6,7 @@
  * @argc: int
  * @argv: list
  *
- * Return = 0
+ * Return: 0 in success.
 */
 
 int main(int argc, char *argv[])
