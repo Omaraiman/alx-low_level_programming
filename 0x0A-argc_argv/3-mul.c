@@ -19,8 +19,8 @@ int main(int argc, char *argv[])
 	}
 
 
-	int num1 = argv[1][0] - '0';
-	int num2 = argv[2][0] - '0';
+	int num1 = atoi(argv[1]);
+	int num2 = atoi(argv[2]);
 
 
 	int result = num1 * num2;
