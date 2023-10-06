@@ -13,12 +13,23 @@
 
 void *malloc_checked(unsigned int b)
 {
-	void *x;
-
-	x = malloc(b);
-	if (x == NULL)
+	if (size == 0)
 	{
-		exit(98);
+		return (NULL);
 	}
-	return (x);
+	char *array;
+
+	*array = malloc(sizeof(char) * size);
+
+	if (array == NULL)
+	{
+		return (NULL);
+	}
+
+	for (unsigned int i = 0; i < size; i++)
+	{
+		array[i] = c;
+	}
+
+	return (array);
 }

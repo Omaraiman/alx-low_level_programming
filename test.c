@@ -11,3 +11,4 @@ int main(void)
 	printf("value of x     :  %d\n", *ptr);
 	printf("value of x     :  %d\n", *ptr);
 }
+
