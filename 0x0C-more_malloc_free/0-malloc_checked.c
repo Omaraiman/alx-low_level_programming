@@ -26,7 +26,9 @@ void *malloc_checked(unsigned int b)
 		return (NULL);
 	}
 
-	for (unsigned int i = 0; i < size; i++)
+	unsigned int i = 0
+
+	for (; i < size; i++)
 	{
 		array[i] = c;
 	}
