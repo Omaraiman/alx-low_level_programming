@@ -1,5 +1,7 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 /**
  * create_array - create an array of characters
@@ -13,25 +15,13 @@
  * Return: a pointer to the array, or NULL if it fails
  **/
 
-char *create_array(unsigned int size, char c)
+void *malloc_checked(unsigned int b)
 {
-	if (size == 0)
+	void *x;
+
+	x = malloc(b);
+	if (x == 0)
 	{
-		return (NULL);
+		return (98);
 	}
-	char *array;
-
-	*array = malloc(sizeof(char) * size);
-
-	if (array == NULL)
-	{
-		return (NULL);
-	}
-
-	for (unsigned int i = 0; i < size; i++)
-	{
-		array[i] = c;
-	}
-
-	return (array);
 }
