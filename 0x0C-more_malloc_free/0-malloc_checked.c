@@ -4,15 +4,11 @@
 #include <limits.h>
 
 /**
- * create_array - create an array of characters
+ * malloc_checked - function that allocates memory using malloc.
  *
- * Description: A function that creates an array of chars,
- *  and initializes it with a specific char.
+ * @b: numper if bytes to allocate
  *
- * @size: size of the memory to print
- * @c: input parameter
- *
- * Return: a pointer to the array, or NULL if it fails
+ * Return: 98
  **/
 
 void *malloc_checked(unsigned int b)
