@@ -13,7 +13,7 @@
  * @n: integer num
  *
  * Return:The returned pointer shall point to a newly allocated space in memory
-*/
+**/
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -22,11 +22,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 	{
-		s1 = "\0";
+		s1 = "";
 	}
 	if (s2 == NULL)
 	{
-		s2 = "\0";
+		s2 = "";
 	}
 
 	size1 = strlen(s1);
@@ -40,7 +40,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	new_str = malloc(size1 + n + 1);
 
 	if (new_str == NULL)
-	return (NULL);
+	exit(NULL);
 
 	strcpy(new_str, s1);
 	strncat(new_str, s2, n);
