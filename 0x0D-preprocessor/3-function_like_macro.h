@@ -2,6 +2,6 @@
 #define OBJECT_LIKE_MACRO_H
 
 
-#define ABS(x)
+#define ABS(x) int x
 
 #endif
