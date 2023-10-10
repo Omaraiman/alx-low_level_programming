@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "_putchar.c"
 
-#define NAME printf("print file name: %s\n", NAME)
+#define NAME _putchar("print file name: %s\n", NAME)
 
 /**
  * main -  program that prints the name of the file it was compiled from
