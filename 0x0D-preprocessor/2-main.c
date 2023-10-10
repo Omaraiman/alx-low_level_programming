@@ -1,7 +1,6 @@
 #include <stdio.h>
-#include "_putchar.c"
 
-#define NAME _putchar("print file name: %s\n", NAME)
+#define FILE_NAME printf("Compiled from file: %s\n", __FILE__)
 
 /**
  * main -  program that prints the name of the file it was compiled from
@@ -11,6 +10,6 @@
 
 int main(void)
 {
-	PRINT_FILE_NAME;
+	FILE_NAME;
 	return (0);
 }
