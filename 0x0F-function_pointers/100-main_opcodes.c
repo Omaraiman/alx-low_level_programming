@@ -8,8 +8,8 @@
  */
 void print_error_and_exit(int status)
 {
-    printf("Error\n");
-    exit(status);
+	printf("Error\n");
+	exit(status);
 }
 
 /**
@@ -19,15 +19,15 @@ void print_error_and_exit(int status)
  */
 void print_opcodes(char *start, int size)
 {
-    int i;
+	int i;
 
-    for (i = 0; i < size; i++)
-    {
-        printf("%02hhx", start[i]);
-        if (i < size - 1)
-            printf(" ");
-    }
-    printf("\n");
+	for (i = 0; i < size; i++)
+	{
+		printf("%02hhx", start[i]);
+		if (i < size - 1)
+			printf(" ");
+	}
+	printf("\n");
 }
 
 /**
@@ -39,17 +39,17 @@ void print_opcodes(char *start, int size)
  */
 int main(int argc, char **argv)
 {
-    int size;
+	int size;
 
-    if (argc != 2)
-        print_error_and_exit(1);
+	if (argc != 2)
+		print_error_and_exit(1);
 
-    size = atoi(argv[1]);
+	size = atoi(argv[1]);
 
-    if (size < 0)
-        print_error_and_exit(2);
+	if (size < 0)
+		print_error_and_exit(2);
 
-    print_opcodes((char *)main, size);
+	print_opcodes((char *)main, size);
 
-    return (0);
+	return (0);
 }
