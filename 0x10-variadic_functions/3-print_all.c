@@ -1,7 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include "variadic_functions.h"
-
 /**
  * print_all - Prints all arguments passed to it
  * @format: The format to print the arguments
@@ -10,46 +9,43 @@
 
 void print_all(const char * const format, ...)
 {
-	va_list count;
-	char *str;
 	int i = 0;
-	float num;
-	char c;
+	char *str, *sep = "";
+
+	va_list count;
 
 	va_start(count, format);
 
-	while (format && format[i])
+	if (format)
 	{
-		switch (format[i])
+		while (format[i])
 		{
-			case 'c':
-				c = va_arg(count, int);
-				printf("%c", c);
-				break;
-			case 'i':
-				printf("%d", va_arg(count, int));
-				break;
-			case 'f':
-				num = va_arg(count, double);
-				printf("%f", num);
-				break;
-			case 's':
-				str = va_arg(count, char *);
-				if (str)
-				{
-					printf("%s", str);
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", sep, va_arg(count, int));
 					break;
-				}
-				printf("(nil)");
-				break;
+				case 'i':
+					printf("%s%d", sep, va_arg(count, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(count, double));
+					break;
+				case 's':
+					str = va_arg(count, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			sep = ", ";
+			i++;
 		}
-		if (format[i + 1])
-			printf(", ");
-
-		i++;
 	}
 
 	printf("\n");
-
 	va_end(count);
 }
