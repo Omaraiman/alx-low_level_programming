@@ -16,6 +16,8 @@ void print_all(const char * const format, ...)
 
 	va_start(count, format);
 
+	if (format)
+	{
 		while (format[i])
 		{
 			switch (format[i])
@@ -42,6 +44,7 @@ void print_all(const char * const format, ...)
 			sep = ", ";
 			i++;
 		}
+	}
 
 	printf("\n");
 	va_end(count);
