@@ -11,38 +11,37 @@ void print_all(const char * const format, ...)
 	va_list count;
 	char *str;
 	int i = 0;
+	float num;
+	char c;
 
 	va_start(count, format);
 	while (format && format[i])
 	{
-		if (format[i] == 'c')
-			printf("%c", va_arg(count, int));
-		else if (format[i] == 'i')
-			printf("%d", va_arg(count, int));
-		else if (format[i] == 's')
+		switch (format[i])
 		{
-			str = va_arg(count, char *);
-			if (str == NULL)
-			{
+			case 'c':
+				c = va_arg(count, int);
+				printf("%c", c);
+				break;
+			case 'i':
+				printf("%d", va_arg(count, int));
+				break;
+			case 'f':
+				num = va_arg(count, double);
+				printf("%f", num);
+				break;
+			case 's':
+				str = va_arg(count, char *);
+				if (str)
+				{
+					printf("%s", str);
+					break;
+				}
 				printf("(nil)");
-			}
-			else
-			{
-				printf("%s", str);
-			}
+				break;
 		}
-		if (format[i + 1] && (format[i] == 'c'))
-		{
+		if (format[i + 1])
 			printf(", ");
-		}
-		if (format[i + 1] && (format[i] == 'i'))
-		{
-			printf(", ");
-		}
-		if (format[i + 1] && (format[i] == 's'))
-		{
-			printf(", ");
-		}
 		i++;
 	}
 	va_end(count);
