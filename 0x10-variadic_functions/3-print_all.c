@@ -49,7 +49,7 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 
-	va_end(count);
-
 	printf("\n");
+
+	va_end(count);
 }
