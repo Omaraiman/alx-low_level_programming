@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * add_node - adds a new node at the beginning of a list_t list
+ * add_node - adds a new node at the beginning
  * @head: double pointer to the start
  * @str: string to duplicate into the new node
  *
@@ -11,21 +11,21 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *my_new_node;
-	int the_len = 0;
+	list_t *new_node;
+	int len = 0;
 
-	while (str[the_len])
-		the_len++;
+	while (str[len])
+		len++;
 
-	my_new_node = malloc(sizeof(list_t));
-	if (!my_new_node)
+	new_node = malloc(sizeof(list_t));
+	if (!new_node)
 		return (NULL);
 
-	my_new_node->str = strdup(str);
-	my_new_node->the_len = the_len;
-	my_new_node->next = (*head);
+	new_node->str = strdup(str);
+	new_node->len = len;
+	new_node->next = (*head);
 
-	(*head) = my_new_node;
+	(*head) = new_node;
 
-	return (my_new_node);
+	return (new_node);
 }
